@@ -6,6 +6,8 @@ import discord
 import asyncio
 import os
 from discord.ext import commands
+from dotenv import load_donetv
+load_donetv()
 import urllib
 from urllib.request import URLError
 from urllib.request import HTTPError
@@ -21,7 +23,7 @@ import json
 import time
 
 
-token = 'NzYzNjY1Mzc3MDI3Njg2NDAw.X37Azg.mghmcB4EFAx4wBl7e8daWUCdLTg'
+token = os.getenv("TOKEN")
 
 client = discord.Client()
 @client.event # Use these decorator to register an event.
